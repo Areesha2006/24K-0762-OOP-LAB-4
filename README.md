@@ -49,7 +49,7 @@ Here are the sample outputs of the programs:
 ![Task 5 Output 1](outputs/task5output1.jpeg)
 
 ### Task 5 Output 2:
-![Task 5 Output 2](outputs/ task5output2.jpeg)
+![Task 5 Output 2](outputs/task5output2.jpeg)
 
 
 ---
@@ -145,100 +145,100 @@ Below are the C++ programs:
 #include<iostream>
 using namespace std;
 class Book{
-    string title;
-    float price;
-    int *stock=new int;
-    public:
-        Book(string title,float p,int s){
-            this->title=title;
-            price=p;
-            *stock=s;
-        }
-        void update_details(){
-            cout<<"Enter book name: ";
-            cin>>title;
-            cout<<"Enter book price: ";
-            cin>>price;
-            cout<<"Enter book stock: ";
-            cin>>*stock;
-            cout<<"Book details updated successfully"<<endl;
-        }
-        void applyDiscount(int qty,float p){
-            if(qty>10){
-                cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<p*qty<<endl;
-                p=(p*90)/100;
-                cout<<"Final Price (After discount): "<<p*qty<<endl;
-            }
-            else{ 
-                if(qty>5){
-                    cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<p*qty<<endl;
-                    p=(p*95)/100;
-                    cout<<"Final Price (After discount): "<<p*qty<<endl;
-                }
-                else{
-                    cout<<"Price: "<<p*qty<<endl;
-                }
-            }
-        }
-        void purchase_book(int qty){
-            if(qty>=0){
-                if(*stock!=0){
-                    if(qty<=*stock){
-                        *stock-=qty;
-                        cout<<qty<<" books purchased successfully"<<endl;
-                        applyDiscount(qty,price);
-                        if(*stock<5){
-                            cout<<"Warning: Low Stock"<<endl;
-                        }
-                    }
-                    else{
-                        cout<<"Maximum "<<*stock<<" books are available only"<<endl;
-                    }
-                }
-                else{
-                    cout<<"No book available"<<endl;
-                }
-            }
-            else{
-                cout<<"Invalid quantity"<<endl;
-            }
-        }
-        void display_book(){
-            cout<<endl<<"Title: "<<title<<endl<<"Price: "<<price<<endl<<"Available Stock: "<<*stock<<endl;
-        }
+Â  Â  string title;
+Â  Â  float price;
+Â  Â  int *stock=new int;
+Â  Â  public:
+Â  Â  Â  Â  Book(string title,float p,int s){
+Â  Â  Â  Â  Â  Â  this->title=title;
+Â  Â  Â  Â  Â  Â  price=p;
+Â  Â  Â  Â  Â  Â  *stock=s;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void update_details(){
+Â  Â  Â  Â  Â  Â  cout<<"Enter book name: ";
+Â  Â  Â  Â  Â  Â  cin>>title;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book price: ";
+Â  Â  Â  Â  Â  Â  cin>>price;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book stock: ";
+Â  Â  Â  Â  Â  Â  cin>>*stock;
+Â  Â  Â  Â  Â  Â  cout<<"Book details updated successfully"<<endl;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void applyDiscount(int qty,float p){
+Â  Â  Â  Â  Â  Â  if(qty>10){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  p=(p*90)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{ 
+Â  Â  Â  Â  Â  Â  Â  Â  if(qty>5){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  p=(p*95)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Price: "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void purchase_book(int qty){
+Â  Â  Â  Â  Â  Â  if(qty>=0){
+Â  Â  Â  Â  Â  Â  Â  Â  if(*stock!=0){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(qty<=*stock){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  *stock-=qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<qty<<" books purchased successfully"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  applyDiscount(qty,price);
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(*stock<5){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Warning: Low Stock"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Maximum "<<*stock<<" books are available only"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"No book available"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid quantity"<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void display_book(){
+Â  Â  Â  Â  Â  Â  cout<<endl<<"Title: "<<title<<endl<<"Price: "<<price<<endl<<"Available Stock: "<<*stock<<endl;
+Â  Â  Â  Â  }
 };
 int main(){
-    float price;
-    string title;
-    int stock;
-    cout<<"Enter book title: ";
-    cin>>title;
-    cout<<"Enter book price: ";
-    cin>>price;
-    cout<<"Enter available stock of the book: ";
-    cin>>stock;    
-    Book b1(title,price,stock);
-    int c,qty;
-    while(1){
-        cout<<endl<<"Enter the appropriate key to perform the required function\n1.Update Book Details\n2.Purchase a book\n3.Display book details\nAny other key to exit\nEnter: ";
-        cin>>c;
-        switch(c){
-            case 1:
-                b1.update_details();
-                break;
-            case 2:
-                cout<<"How many books do you want to purchase: ";
-                cin>>qty;
-                b1.purchase_book(qty);
-                break;
-            case 3:
-                b1.display_book();
-                break;
-            default:
-                cout<<"Exited successfully";
-                return 0;
-        }
-    }
+Â  Â  float price;
+Â  Â  string title;
+Â  Â  int stock;
+Â  Â  cout<<"Enter book title: ";
+Â  Â  cin>>title;
+Â  Â  cout<<"Enter book price: ";
+Â  Â  cin>>price;
+Â  Â  cout<<"Enter available stock of the book: ";
+Â  Â  cin>>stock; Â  Â 
+Â  Â  Book b1(title,price,stock);
+Â  Â  int c,qty;
+Â  Â  while(1){
+Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key to perform the required function\n1.Update Book Details\n2.Purchase a book\n3.Display book details\nAny other key to exit\nEnter: ";
+Â  Â  Â  Â  cin>>c;
+Â  Â  Â  Â  switch(c){
+Â  Â  Â  Â  Â  Â  case 1:
+Â  Â  Â  Â  Â  Â  Â  Â  b1.update_details();
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  case 2:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"How many books do you want to purchase: ";
+Â  Â  Â  Â  Â  Â  Â  Â  cin>>qty;
+Â  Â  Â  Â  Â  Â  Â  Â  b1.purchase_book(qty);
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  case 3:
+Â  Â  Â  Â  Â  Â  Â  Â  b1.display_book();
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  default:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Exited successfully";
+Â  Â  Â  Â  Â  Â  Â  Â  return 0;
+Â  Â  Â  Â  }
+Â  Â  }
 }
 
 
@@ -269,100 +269,100 @@ Below are the C++ programs:
 #include<iostream>
 using namespace std;
 class Book{
-    string title;
-    float price;
-    int *stock=new int;
-    public:
-        Book(string title,float p,int s){
-            this->title=title;
-            price=p;
-            *stock=s;
-        }
-        Book(Book& obj){
-            title=obj.title;
-            price=obj.price;
-            *stock=*obj.stock;
-        }
-        void update_details(){
-            cout<<"Enter book name: ";
-            cin>>title;
-            cout<<"Enter book price: ";
-            cin>>price;
-            cout<<"Enter book stock: ";
-            cin>>*stock;
-            cout<<"Book details updated successfully"<<endl;
-        }
-        void applyDiscount(int qty,float p){
-            if(qty>10){
-                cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<p*qty<<endl;
-                p=(p*90)/100;
-                cout<<"Final Price (After discount): "<<p*qty<<endl;
-            }
-            else{ 
-                if(qty>5){
-                    cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<p*qty<<endl;
-                    p=(p*95)/100;
-                    cout<<"Final Price (After discount): "<<p*qty<<endl;
-                }
-                else{
-                    cout<<"Price: "<<p*qty<<endl;
-                }
-            }
-        }
-        void purchase_book(int qty){
-            if(qty>=0){
-                if(*stock!=0){
-                    if(qty<=*stock){
-                        *stock-=qty;
-                        cout<<qty<<" books purchased successfully"<<endl;
-                        applyDiscount(qty,price);
-                        if(*stock<5){
-                            cout<<"Warning: Low Stock"<<endl;
-                        }
-                    }
-                    else{
-                        cout<<"Maximum "<<*stock<<" books are available only"<<endl;
-                    }
-                }
-                else{
-                    cout<<"No book available"<<endl;
-                }
-            }
-            else{
-                cout<<"Invalid quantity"<<endl;
-            }
-        }
-        void display_book(){
-            cout<<endl<<"Title: "<<title<<endl<<"Price: "<<price<<endl<<"Available Stock: "<<*stock<<endl;
-        }
-        ~Book(){
-            cout<<"Object destroyed successfully"<<endl;
-            delete stock;
-        }
+Â  Â  string title;
+Â  Â  float price;
+Â  Â  int *stock=new int;
+Â  Â  public:
+Â  Â  Â  Â  Book(string title,float p,int s){
+Â  Â  Â  Â  Â  Â  this->title=title;
+Â  Â  Â  Â  Â  Â  price=p;
+Â  Â  Â  Â  Â  Â  *stock=s;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  Book(Book& obj){
+Â  Â  Â  Â  Â  Â  title=obj.title;
+Â  Â  Â  Â  Â  Â  price=obj.price;
+Â  Â  Â  Â  Â  Â  *stock=*obj.stock;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void update_details(){
+Â  Â  Â  Â  Â  Â  cout<<"Enter book name: ";
+Â  Â  Â  Â  Â  Â  cin>>title;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book price: ";
+Â  Â  Â  Â  Â  Â  cin>>price;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book stock: ";
+Â  Â  Â  Â  Â  Â  cin>>*stock;
+Â  Â  Â  Â  Â  Â  cout<<"Book details updated successfully"<<endl;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void applyDiscount(int qty,float p){
+Â  Â  Â  Â  Â  Â  if(qty>10){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  p=(p*90)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{ 
+Â  Â  Â  Â  Â  Â  Â  Â  if(qty>5){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  p=(p*95)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Price: "<<p*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void purchase_book(int qty){
+Â  Â  Â  Â  Â  Â  if(qty>=0){
+Â  Â  Â  Â  Â  Â  Â  Â  if(*stock!=0){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(qty<=*stock){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  *stock-=qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<qty<<" books purchased successfully"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  applyDiscount(qty,price);
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(*stock<5){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Warning: Low Stock"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Maximum "<<*stock<<" books are available only"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"No book available"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid quantity"<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void display_book(){
+Â  Â  Â  Â  Â  Â  cout<<endl<<"Title: "<<title<<endl<<"Price: "<<price<<endl<<"Available Stock: "<<*stock<<endl;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  ~Book(){
+Â  Â  Â  Â  Â  Â  cout<<"Object destroyed successfully"<<endl;
+Â  Â  Â  Â  Â  Â  delete stock;
+Â  Â  Â  Â  }
 };
 int main(){
-    float price;
-    string title;
-    int stock;
-    cout<<"Enter book title: ";
-    cin>>title;
-    cout<<"Enter book price: ";
-    cin>>price;
-    cout<<"Enter available stock of the book: ";
-    cin>>stock;    
-    Book b1(title,price,stock);
-    Book b2=b1;
-    cout<<"Details of books b1";
-    b1.display_book();
-    cout<<endl<<"Details of book b2 copied from book b1";
-    b2.display_book();
-    cout<<endl<<"Updating the details of book b1"<<endl;
-    b1.update_details();
-    cout<<"Details of books b1";
-    b1.display_book();
-    cout<<endl<<"Details of book b2";
-    b2.display_book();
-    return 0;
+Â  Â  float price;
+Â  Â  string title;
+Â  Â  int stock;
+Â  Â  cout<<"Enter book title: ";
+Â  Â  cin>>title;
+Â  Â  cout<<"Enter book price: ";
+Â  Â  cin>>price;
+Â  Â  cout<<"Enter available stock of the book: ";
+Â  Â  cin>>stock; Â  Â 
+Â  Â  Book b1(title,price,stock);
+Â  Â  Book b2=b1;
+Â  Â  cout<<"Details of books b1";
+Â  Â  b1.display_book();
+Â  Â  cout<<endl<<"Details of book b2 copied from book b1";
+Â  Â  b2.display_book();
+Â  Â  cout<<endl<<"Updating the details of book b1"<<endl;
+Â  Â  b1.update_details();
+Â  Â  cout<<"Details of books b1";
+Â  Â  b1.display_book();
+Â  Â  cout<<endl<<"Details of book b2";
+Â  Â  b2.display_book();
+Â  Â  return 0;
 }
 
 
@@ -405,162 +405,162 @@ Below are the C++ programs:
 #include<iostream>
 using namespace std;
 class Book{
-    string title;
-    float *price=new float;
-    int *stock=new int;
-    public:
-        Book(string title,float *price,int s){
-            this->title=title;
-            this->price=price;
-            *stock=s;
-        }
-        Book(Book& obj){
-            title=obj.title;
-            *price=*obj.price;
-            *stock=*obj.stock;
-        }
-        void update_details(){
-            cout<<"Enter book name: ";
-            cin>>title;
-            cout<<"Enter book price: ";
-            cin>>*price;
-            cout<<"Enter book stock: ";
-            cin>>*stock;
-            cout<<"Book details updated successfully"<<endl;
-        }
-        void applyDiscount(int qty,float price){
-            if(qty>100){
-                cout<<"You have got the discount of 40%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*60)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else if(qty>20){
-                cout<<"You have got the discount of 20%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*80)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else if(qty>10){
-                cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*90)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else if(qty>5){
-                cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*95)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else{
-                cout<<"Price: "<<price*qty<<endl;
-            }
-        }
-        void purchase_book(int qty){
-            if(qty>=0){
-                if(*stock!=0){
-                    if(qty<=*stock){
-                        *stock-=qty;
-                        cout<<qty<<" books purchased successfully"<<endl;
-                        applyDiscount(qty,*(this->price));
-                        if(*stock<5){
-                            cout<<"Warning: Low Stock"<<endl;
-                        }
-                    }
-                    else{
-                        cout<<"Maximum "<<*stock<<" books are available only"<<endl;
-                    }
-                }
-                else{
-                    cout<<"No book available"<<endl;
-                }
-            }
-            else{
-                cout<<"Invalid quantity"<<endl;
-            }
-        }
-        void display_book(){
-            cout<<endl<<"Title: "<<title<<endl<<"Price: "<<*price<<endl<<"Available Stock: "<<*stock<<endl;
-        }
-        ~Book(){
-            cout<<"Object destroyed successfully"<<endl;
-            delete stock;
-            delete this->price;
-        }
+Â  Â  string title;
+Â  Â  float *price=new float;
+Â  Â  int *stock=new int;
+Â  Â  public:
+Â  Â  Â  Â  Book(string title,float *price,int s){
+Â  Â  Â  Â  Â  Â  this->title=title;
+Â  Â  Â  Â  Â  Â  this->price=price;
+Â  Â  Â  Â  Â  Â  *stock=s;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  Book(Book& obj){
+Â  Â  Â  Â  Â  Â  title=obj.title;
+Â  Â  Â  Â  Â  Â  *price=*obj.price;
+Â  Â  Â  Â  Â  Â  *stock=*obj.stock;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void update_details(){
+Â  Â  Â  Â  Â  Â  cout<<"Enter book name: ";
+Â  Â  Â  Â  Â  Â  cin>>title;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book price: ";
+Â  Â  Â  Â  Â  Â  cin>>*price;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book stock: ";
+Â  Â  Â  Â  Â  Â  cin>>*stock;
+Â  Â  Â  Â  Â  Â  cout<<"Book details updated successfully"<<endl;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void applyDiscount(int qty,float price){
+Â  Â  Â  Â  Â  Â  if(qty>100){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 40%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*60)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else if(qty>20){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 20%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*80)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else if(qty>10){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*90)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else if(qty>5){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*95)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Price: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void purchase_book(int qty){
+Â  Â  Â  Â  Â  Â  if(qty>=0){
+Â  Â  Â  Â  Â  Â  Â  Â  if(*stock!=0){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(qty<=*stock){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  *stock-=qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<qty<<" books purchased successfully"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  applyDiscount(qty,*(this->price));
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(*stock<5){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Warning: Low Stock"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Maximum "<<*stock<<" books are available only"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"No book available"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid quantity"<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void display_book(){
+Â  Â  Â  Â  Â  Â  cout<<endl<<"Title: "<<title<<endl<<"Price: "<<*price<<endl<<"Available Stock: "<<*stock<<endl;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  ~Book(){
+Â  Â  Â  Â  Â  Â  cout<<"Object destroyed successfully"<<endl;
+Â  Â  Â  Â  Â  Â  delete stock;
+Â  Â  Â  Â  Â  Â  delete this->price;
+Â  Â  Â  Â  }
 };
 int main(){
-    float price;
-    string title;
-    int stock,c1,c2,qty;
-    cout<<"For book b1"<<endl;
-    cout<<"Enter book title: ";
-    cin>>title;
-    cout<<"Enter book price: ";
-    cin>>price;
-    cout<<"Enter available stock of the book: ";
-    cin>>stock;    
-    Book b1(title,&price,stock);
-    Book b2=b1;
-    cout<<"Details of books b1";
-    b1.display_book();
-    cout<<endl<<"Details of book b2 copied from book b1";
-    b2.display_book();
-    cout<<endl<<"Updating the details of book b1"<<endl;
-    b1.update_details();
-    cout<<endl<<"Details of books b1";
-    b1.display_book();
-    cout<<endl<<"Details of book b2";
-    b2.display_book();
-    while(1){
-        cout<<endl<<"Enter the appropriate key to perform the required function\n1.Update Book Details\n2.Purchase a book\n\tIf you buy in bulk (more than 100) you will get 40% discount\n\tIf you buy more than 5 books you will get 5% discount\n\tIf you buy more than 10 books you will get 10% discount\n\tIf you buy more than 20 books you will get 20% discount\n3.Display book details\nAny other key to exit\nEnter: ";
-        cin>>c1;
-        switch(c1){
-            case 1:
-                cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
-                cin>>c2;
-                if(c2==1){
-                    b1.update_details();
-                }
-                else if(c2==2){
-                    b2.update_details();
-                }
-                else{
-                    cout<<"Invalid input"<<endl;
-                }
-                break;
-            case 2:
-                cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
-                cin>>c2;
-                if(c2==1){
-                    cout<<"How many books do you want to purchase: ";
-                    cin>>qty;
-                    b1.purchase_book(qty);
-                }
-                else if(c2==2){
-                    cout<<"How many books do you want to purchase: ";
-                    cin>>qty;
-                    b2.purchase_book(qty);
-                }
-                else{
-                    cout<<"Invalid input"<<endl;
-                }
-                break;
-            case 3:
-                cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
-                cin>>c2;
-                if(c2==1){
-                    b1.display_book();
-                    break;
-                }
-                else if(c2==2){
-                    b2.display_book();
-                }
-                else{
-                    cout<<"Invalid input"<<endl;
-                }
-                break;
-            default:
-                cout<<"Exited successfully"<<endl;
-                return 0;
-        }
-    }
+Â  Â  float price;
+Â  Â  string title;
+Â  Â  int stock,c1,c2,qty;
+Â  Â  cout<<"For book b1"<<endl;
+Â  Â  cout<<"Enter book title: ";
+Â  Â  cin>>title;
+Â  Â  cout<<"Enter book price: ";
+Â  Â  cin>>price;
+Â  Â  cout<<"Enter available stock of the book: ";
+Â  Â  cin>>stock; Â  Â 
+Â  Â  Book b1(title,&price,stock);
+Â  Â  Book b2=b1;
+Â  Â  cout<<"Details of books b1";
+Â  Â  b1.display_book();
+Â  Â  cout<<endl<<"Details of book b2 copied from book b1";
+Â  Â  b2.display_book();
+Â  Â  cout<<endl<<"Updating the details of book b1"<<endl;
+Â  Â  b1.update_details();
+Â  Â  cout<<endl<<"Details of books b1";
+Â  Â  b1.display_book();
+Â  Â  cout<<endl<<"Details of book b2";
+Â  Â  b2.display_book();
+Â  Â  while(1){
+Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key to perform the required function\n1.Update Book Details\n2.Purchase a book\n\tIf you buy in bulk (more than 100) you will get 40% discount\n\tIf you buy more than 5 books you will get 5% discount\n\tIf you buy more than 10 books you will get 10% discount\n\tIf you buy more than 20 books you will get 20% discount\n3.Display book details\nAny other key to exit\nEnter: ";
+Â  Â  Â  Â  cin>>c1;
+Â  Â  Â  Â  switch(c1){
+Â  Â  Â  Â  Â  Â  case 1:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
+Â  Â  Â  Â  Â  Â  Â  Â  cin>>c2;
+Â  Â  Â  Â  Â  Â  Â  Â  if(c2==1){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b1.update_details();
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else if(c2==2){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b2.update_details();
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid input"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  case 2:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
+Â  Â  Â  Â  Â  Â  Â  Â  cin>>c2;
+Â  Â  Â  Â  Â  Â  Â  Â  if(c2==1){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"How many books do you want to purchase: ";
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cin>>qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b1.purchase_book(qty);
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else if(c2==2){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"How many books do you want to purchase: ";
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cin>>qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b2.purchase_book(qty);
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid input"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  case 3:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
+Â  Â  Â  Â  Â  Â  Â  Â  cin>>c2;
+Â  Â  Â  Â  Â  Â  Â  Â  if(c2==1){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b1.display_book();
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else if(c2==2){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b2.display_book();
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid input"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  default:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Exited successfully"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  return 0;
+Â  Â  Â  Â  }
+Â  Â  }
 }
 
 
@@ -604,156 +604,156 @@ Below are the C++ programs:
 #include<iostream>
 using namespace std;
 class Book{
-    string title;
-    float *price=new float;
-    int *stock=new int,BookID;
-    static int counter;
-    public:
-        Book(string t,float *p,int *s): BookID(counter++),title(t),price(p),stock(s){}
-        Book(Book& obj):BookID(counter++),title(obj.title),price(obj.price),stock(obj.stock){}
-        void update_details(){
-            cout<<"Enter book name: ";
-            cin>>title;
-            cout<<"Enter book price: ";
-            cin>>*price;
-            cout<<"Enter book stock: ";
-            cin>>*stock;
-            cout<<"Book details updated successfully"<<endl;
-        }
-        void applyDiscount(int qty,float price){
-            if(qty>100){
-                cout<<"You have got the discount of 40%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*60)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else if(qty>20){
-                cout<<"You have got the discount of 20%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*80)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else if(qty>10){
-                cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*90)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else if(qty>5){
-                cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<price*qty<<endl;
-                price=(price*95)/100;
-                cout<<"Final Price (After discount): "<<price*qty<<endl;
-            }
-            else{
-                cout<<"Price: "<<price*qty<<endl;
-            }
-        }
-        void purchase_book(int qty){
-            if(qty>=0){
-                if(*stock!=0){
-                    if(qty<=*stock){
-                        *stock-=qty;
-                        cout<<qty<<" books purchased successfully"<<endl;
-                        applyDiscount(qty,*(this->price));
-                        if(*stock<5){
-                            cout<<"Warning: Low Stock"<<endl;
-                        }
-                    }
-                    else{
-                        cout<<"Maximum "<<*stock<<" books are available only"<<endl;
-                    }
-                }
-                else{
-                    cout<<"No book available"<<endl;
-                }
-            }
-            else{
-                cout<<"Invalid quantity"<<endl;
-            }
-        }
-        void display_book(){
-            cout<<endl<<"Book ID: "<<BookID<<endl<<"Title: "<<title<<endl<<"Price: "<<*price<<endl<<"Available Stock: "<<*stock<<endl;
-        }
-        ~Book(){
-            cout<<"Object destroyed successfully"<<endl;
-            delete stock;
-            delete this->price;
-        }
+Â  Â  string title;
+Â  Â  float *price=new float;
+Â  Â  int *stock=new int,BookID;
+Â  Â  static int counter;
+Â  Â  public:
+Â  Â  Â  Â  Book(string t,float *p,int *s): BookID(counter++),title(t),price(p),stock(s){}
+Â  Â  Â  Â  Book(Book& obj):BookID(counter++),title(obj.title),price(obj.price),stock(obj.stock){}
+Â  Â  Â  Â  void update_details(){
+Â  Â  Â  Â  Â  Â  cout<<"Enter book name: ";
+Â  Â  Â  Â  Â  Â  cin>>title;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book price: ";
+Â  Â  Â  Â  Â  Â  cin>>*price;
+Â  Â  Â  Â  Â  Â  cout<<"Enter book stock: ";
+Â  Â  Â  Â  Â  Â  cin>>*stock;
+Â  Â  Â  Â  Â  Â  cout<<"Book details updated successfully"<<endl;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void applyDiscount(int qty,float price){
+Â  Â  Â  Â  Â  Â  if(qty>100){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 40%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*60)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else if(qty>20){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 20%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*80)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else if(qty>10){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 10%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*90)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else if(qty>5){
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"You have got the discount of 5%"<<endl<<"Price before discount: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  price=(price*95)/100;
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Final Price (After discount): "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Price: "<<price*qty<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void purchase_book(int qty){
+Â  Â  Â  Â  Â  Â  if(qty>=0){
+Â  Â  Â  Â  Â  Â  Â  Â  if(*stock!=0){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(qty<=*stock){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  *stock-=qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<qty<<" books purchased successfully"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  applyDiscount(qty,*(this->price));
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  if(*stock<5){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Warning: Low Stock"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Maximum "<<*stock<<" books are available only"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"No book available"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid quantity"<<endl;
+Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  }
+Â  Â  Â  Â  void display_book(){
+Â  Â  Â  Â  Â  Â  cout<<endl<<"Book ID: "<<BookID<<endl<<"Title: "<<title<<endl<<"Price: "<<*price<<endl<<"Available Stock: "<<*stock<<endl;
+Â  Â  Â  Â  }
+Â  Â  Â  Â  ~Book(){
+Â  Â  Â  Â  Â  Â  cout<<"Object destroyed successfully"<<endl;
+Â  Â  Â  Â  Â  Â  delete stock;
+Â  Â  Â  Â  Â  Â  delete this->price;
+Â  Â  Â  Â  }
 };
 int Book::counter=1;
 int main(){
-    float price;
-    string title;
-    int stock,c1,c2,qty;
-    cout<<"For book b1"<<endl;
-    cout<<"Enter book title: ";
-    cin>>title;
-    cout<<"Enter book price: ";
-    cin>>price;
-    cout<<"Enter available stock of the book: ";
-    cin>>stock;    
-    Book b1(title,&price,&stock);
-    Book b2=b1;
-    cout<<"Details of books b1";
-    b1.display_book();
-    cout<<endl<<"Details of book b2 copied from book b1";
-    b2.display_book();
-    cout<<endl<<"Updating the details of book b1"<<endl;
-    b1.update_details();
-    cout<<endl<<"Details of books b1";
-    b1.display_book();
-    cout<<endl<<"Details of book b2";
-    b2.display_book();
-    while(1){
-        cout<<endl<<"Enter the appropriate key to perform the required function\n1.Update Book Details\n2.Purchase a book\n\tIf you buy in bulk (more than 100) you will get 40% discount\n\tIf you buy more than 5 books you will get 5% discount\n\tIf you buy more than 10 books you will get 10% discount\n\tIf you buy more than 20 books you will get 20% discount\n3.Display book details\nAny other key to exit\nEnter: ";
-        cin>>c1;
-        switch(c1){
-            case 1:
-                cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
-                cin>>c2;
-                if(c2==1){
-                    b1.update_details();
-                }
-                else if(c2==2){
-                    b2.update_details();
-                }
-                else{
-                    cout<<"Invalid input"<<endl;
-                }
-                break;
-            case 2:
-                cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
-                cin>>c2;
-                if(c2==1){
-                    cout<<"How many books do you want to purchase: ";
-                    cin>>qty;
-                    b1.purchase_book(qty);
-                }
-                else if(c2==2){
-                    cout<<"How many books do you want to purchase: ";
-                    cin>>qty;
-                    b2.purchase_book(qty);
-                }
-                else{
-                    cout<<"Invalid input"<<endl;
-                }
-                break;
-            case 3:
-                cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
-                cin>>c2;
-                if(c2==1){
-                    b1.display_book();
-                    break;
-                }
-                else if(c2==2){
-                    b2.display_book();
-                }
-                else{
-                    cout<<"Invalid input"<<endl;
-                }
-                break;
-            default:
-                cout<<"Exited successfully"<<endl;
-                return 0;
-        }
-    }    
+Â  Â  float price;
+Â  Â  string title;
+Â  Â  int stock,c1,c2,qty;
+Â  Â  cout<<"For book b1"<<endl;
+Â  Â  cout<<"Enter book title: ";
+Â  Â  cin>>title;
+Â  Â  cout<<"Enter book price: ";
+Â  Â  cin>>price;
+Â  Â  cout<<"Enter available stock of the book: ";
+Â  Â  cin>>stock; Â  Â 
+Â  Â  Book b1(title,&price,&stock);
+Â  Â  Book b2=b1;
+Â  Â  cout<<"Details of books b1";
+Â  Â  b1.display_book();
+Â  Â  cout<<endl<<"Details of book b2 copied from book b1";
+Â  Â  b2.display_book();
+Â  Â  cout<<endl<<"Updating the details of book b1"<<endl;
+Â  Â  b1.update_details();
+Â  Â  cout<<endl<<"Details of books b1";
+Â  Â  b1.display_book();
+Â  Â  cout<<endl<<"Details of book b2";
+Â  Â  b2.display_book();
+Â  Â  while(1){
+Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key to perform the required function\n1.Update Book Details\n2.Purchase a book\n\tIf you buy in bulk (more than 100) you will get 40% discount\n\tIf you buy more than 5 books you will get 5% discount\n\tIf you buy more than 10 books you will get 10% discount\n\tIf you buy more than 20 books you will get 20% discount\n3.Display book details\nAny other key to exit\nEnter: ";
+Â  Â  Â  Â  cin>>c1;
+Â  Â  Â  Â  switch(c1){
+Â  Â  Â  Â  Â  Â  case 1:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
+Â  Â  Â  Â  Â  Â  Â  Â  cin>>c2;
+Â  Â  Â  Â  Â  Â  Â  Â  if(c2==1){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b1.update_details();
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else if(c2==2){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b2.update_details();
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid input"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  case 2:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
+Â  Â  Â  Â  Â  Â  Â  Â  cin>>c2;
+Â  Â  Â  Â  Â  Â  Â  Â  if(c2==1){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"How many books do you want to purchase: ";
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cin>>qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b1.purchase_book(qty);
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else if(c2==2){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"How many books do you want to purchase: ";
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cin>>qty;
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b2.purchase_book(qty);
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid input"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  case 3:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<endl<<"Enter the appropriate key according to the book\n1.Book b1\n2.Book b2\nEnter: ";
+Â  Â  Â  Â  Â  Â  Â  Â  cin>>c2;
+Â  Â  Â  Â  Â  Â  Â  Â  if(c2==1){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b1.display_book();
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else if(c2==2){
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  b2.display_book();
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  else{
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Invalid input"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  }
+Â  Â  Â  Â  Â  Â  Â  Â  break;
+Â  Â  Â  Â  Â  Â  default:
+Â  Â  Â  Â  Â  Â  Â  Â  cout<<"Exited successfully"<<endl;
+Â  Â  Â  Â  Â  Â  Â  Â  return 0;
+Â  Â  Â  Â  }
+Â  Â  } Â  Â 
 }
 
 

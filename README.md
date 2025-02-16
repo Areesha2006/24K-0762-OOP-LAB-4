@@ -6,50 +6,50 @@
 Here are the sample outputs of the programs:
 
 ### Task 1 Output:
-![Task 1Output](outputs/task 1.png)
+![Task 1Output](outputs/task1.png)
 
 ### Task 2 Output 1:
-![Task 2 Output 1](outputs/task 2 output 1.jpeg)
+![Task 2 Output 1](outputs/task2output1.jpeg)
 
 ### Task 2 Output 2:
-![Task 2 Output 2](outputs/task 2 output 2.jpeg)
+![Task 2 Output 2](outputs/task2output2.jpeg)
 
 ### Task 2 Output 3:
-![Task 2 Output 3](outputs/task 2 output 3.jpeg)
+![Task 2 Output 3](outputs/task2output3.jpeg)
 
 ### Task 3 Output:
-![Task 3 Output](outputs/task 3.jpeg)
+![Task 3 Output](outputs/task3.jpeg)
 
 ### Task 4 Output 1:
-![Task 4 Output 1](outputs/task 4 output 1.jpeg)
+![Task 4 Output 1](outputs/task4output1.jpeg)
 
 ### Task 4 Output 2:
-![Task 4 Output 2](outputs/task 4 output 2.jpeg)
+![Task 4 Output 2](outputs/task4output2.jpeg)
 
 ### Task 4 Output 3:
-![Task 4 Output 3](outputs/task 4 output 3.jpeg)
+![Task 4 Output 3](outputs/task4output3.jpeg)
 
 ### Task 4 Output 4:
-![Task 4 Output 4](outputs/task 4 output 4.jpeg)
+![Task 4 Output 4](outputs/task4output4.jpeg)
 
 ### Task 4 Output 5:
-![Task 4 Output 5](outputs/task 4 output 5.jpeg)
+![Task 4 Output 5](outputs/task4output5.jpeg)
 
 ### Task 4 Output 6:
-![Task 4 Output 6](outputs/task 4 output 6.jpeg)
+![Task 4 Output 6](outputs/task4output6.jpeg)
 
 ### Task 4 Output 7:
-![Task 4 Output 7](outputs/task 4 output 7.jpeg)
+![Task 4 Output 7](outputs/task4output7.jpeg)
 
 ### Task 4 Output 8:
-![Task 4 Output 8](outputs/task 4 output 8.jpeg)
+![Task 4 Output 8](outputs/task4output8.jpeg)
 
 
 ### Task 5 Output 1:
-![Task 5 Output 1](outputs/task 5 output 1.jpeg)
+![Task 5 Output 1](outputs/task5output1.jpeg)
 
 ### Task 5 Output 2:
-![Task 5 Output 2](outputs/ task 5 output 1.jpeg)
+![Task 5 Output 2](outputs/ task5output2.jpeg)
 
 
 ---
